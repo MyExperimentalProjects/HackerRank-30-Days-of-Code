@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scanner = new Scanner(System.in);
+        int numTestCases = scanner.nextInt();
+        scanner.nextLine();
+        for(int i = 0; i < numTestCases ; ++i){
+            String s = scanner.nextLine();
+            String evenIndicesChars = "", oddIndicesChars = "";
+            for(int j = 1 ; j <= s.length() ; ++j){
+                if(j%2 == 0){
+                    evenIndicesChars = evenIndicesChars + s.charAt(j-1);
+                }else{ 
+                    oddIndicesChars = oddIndicesChars + s.charAt(j-1);
+                }
+            }
+            System.out.println(oddIndicesChars + " " + evenIndicesChars);
+        }
+    }
+}
